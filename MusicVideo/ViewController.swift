@@ -15,7 +15,7 @@ class ViewController: UIViewController {
         
         //call API
         let api = APIManager()
-        api.loadData("http://itunes.apple.com/us/rss/topmusicvideos/limit=10/json",completion:didLoadData)
+        api.loadData("http://itunes.apple.com/us/rss/topmusicvideos/limit=10/json",completion: didLoadData)
         
     }
 
@@ -24,11 +24,13 @@ class ViewController: UIViewController {
     func didLoadData(result:String)  {
    
     
-        let alert = UIAlertController(title: (result), message: nil, preferredStyle: alert)
+        let alert = UIAlertController(title: (result), message: nil, preferredStyle: .Alert)
         let okAction = UIAlertAction(title: "OK", style: .Default) { action -> Void in
+        
+        
         }
 
         alert.addAction(okAction)
-        self.presentedViewController(alert, animated: true, completion: nil)
+        self.presentViewController(alert, animated: true, completion: nil)
     }
 }
