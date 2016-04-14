@@ -90,7 +90,7 @@ class Videos  {
         //VideoName
         
         if let name = data["im:name"] as? JSONDictionary,
-            vName = name["lable"] as? String {
+            vName = name["label"] as? String {
             self._vName = vName
         
     } else {
