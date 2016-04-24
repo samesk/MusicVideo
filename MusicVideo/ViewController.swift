@@ -12,8 +12,14 @@ class ViewController: UIViewController {
 
    var videos = [Videos]()
     
+    @IBOutlet weak var displayLabel: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
+
+        
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: "reachabilityStatusChanged", name: "ReachStatusChanged", object: nil)
+        
+       reachabilityStatusCahnged()
         
         //call API
         let api = APIManager()
@@ -24,7 +30,7 @@ class ViewController: UIViewController {
     
     func didLoadData(videos: [Videos])  {
    
-    
+        print(reachabilityStatus)
         self.videos = videos
         
         for item in videos {
@@ -35,6 +41,22 @@ class ViewController: UIViewController {
                 print("\(index) name = \(item.vName)")
         }
     }
-    
-    
+    func reachabilityStatusCahnged()
+    {
+        switch reachabilityStatus {
+        case NOACCESS: view.backgroundColor = UIColor.redColor()
+        displayLabel.text = "No Internet"
+        case WIFI : view.backgroundColor = UIColor.greenColor()
+        displayLabel.text = "Reachable with WiFi"
+        case WWAN : view.backgroundColor = UIColor.yellowColor()
+        displayLabel.text = "Reachable with Cellular"
+        default: return
+        }
+        
+    }
+    // its called just as the objact is about to be deallocated
+    deinit
+    {
+        NSNotificationCenter.defaultCenter().removeObserver(self, name: "ReachStatusChanged", object: nil)
+    }
 }
