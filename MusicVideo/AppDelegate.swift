@@ -7,8 +7,8 @@
 //
 
 import UIKit
-    var reachability : Reachability?
-    var reachabilityStatus = " "
+var reachability : Reachability?
+var reachabilityStatus = " "
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -18,7 +18,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: "reachabilityStatusChanged:", name: kReachabilityChangedNotification, object: nil)
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(AppDelegate.reachabilityChanged(_:)), name: kReachabilityChangedNotification, object: nil)
         
         internetCheck = Reachability.reachabilityForInternetConnection()
         internetCheck?.startNotifier()
@@ -26,6 +26,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         
         return true
+    }
+   
+    func reachabilityChanged(notification: NSNotification) {
+        reachability = notification.object as? Reachability
+        statusChangedWithReachability(reachability!)
     }
     func statusChangedWithReachability(currentReachabilityStatus: Reachability) {
         

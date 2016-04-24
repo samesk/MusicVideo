@@ -17,7 +17,14 @@ class ViewController: UIViewController {
         super.viewDidLoad()
 
         
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: "reachabilityStatusChanged", name: "ReachStatusChanged", object: nil)
+        #if swift(>=2.2)
+            
+//            NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(ViewController.reachabilityStatusChanged), name: "ReachStatusChanged", object: nil)
+//            
+        #else
+            NSNotificationCenter.defaultCenter().addObserver(self, selector: "reachabilityStatusChanged:", name: "ReachStatusChanged", object: nil)
+            
+        #endif
         
        reachabilityStatusCahnged()
         
