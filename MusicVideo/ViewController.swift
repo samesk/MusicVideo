@@ -42,6 +42,7 @@ class ViewController: UIViewController ,UITableViewDataSource, UITableViewDelega
     func didLoadData(videos: [Videos])  {
    
         print(reachabilityStatus)
+        
         self.videos = videos
         
         for item in videos {
@@ -84,14 +85,14 @@ class ViewController: UIViewController ,UITableViewDataSource, UITableViewDelega
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
     
-    return videos.count
+        return videos.count
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell{
         let cell = tableView.dequeueReusableCellWithIdentifier("cell", forIndexPath: indexPath)
         let video = videos[indexPath.row]
         
-        cell.textLabel?.text = ("\(indexPath.row + 1)" )
+        cell.textLabel?.text = ("\(indexPath.row + 1)")
         
         cell.detailTextLabel?.text = video.vName
         return cell

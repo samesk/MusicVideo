@@ -20,7 +20,7 @@ class APIManager {
         let url = NSURL(string: urlString)!
         
         let task = session.dataTaskWithURL(url) {
-           (data, response, error )->Void in
+           (data, response, error )-> Void in
             
             if error != nil {
                
@@ -44,7 +44,7 @@ class APIManager {
                         entries = feed["entry"] as? JSONArray{
                         
                             var videos = [Videos]()
-                            for entry in entries{
+                            for entry in entries {
                                 let entry = Videos(data: entry as! JSONDictionary)
                                 videos.append(entry)
                         }
@@ -52,8 +52,8 @@ class APIManager {
                             print("iTunesApiManager - total count --> \(i)")
                             print(" ")
                         
-                            let priority = DISPATCH_QUEUE_PRIORITY_HIGH
-                        dispatch_async(dispatch_get_global_queue(priority, 0)) {
+                            let priority = DISPATCH_QUEUE_PRIORITY_DEFAULT
+                            dispatch_async(dispatch_get_global_queue(priority, 0)) {
                             dispatch_async(dispatch_get_main_queue()) {
                                 completion(videos)
                             }
@@ -66,12 +66,10 @@ class APIManager {
                     
                     }
                 }
-                    
-                
+            
                 
             }
         
-            
             
             task.resume()
         }

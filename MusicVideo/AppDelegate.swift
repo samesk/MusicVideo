@@ -8,7 +8,8 @@
 
 import UIKit
 var reachability : Reachability?
-var reachabilityStatus = WIFI
+
+var reachabilityStatus = " "
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -36,6 +37,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         reachability = notification.object as? Reachability
         statusChangedWithReachability(reachability!)
     }
+    
     func statusChangedWithReachability(currentReachabilityStatus: Reachability) {
         
         let networkStatus: NetworkStatus = currentReachabilityStatus.currentReachabilityStatus()
@@ -47,7 +49,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         default:return
             
         }
-        NSNotificationCenter.defaultCenter().postNotificationName("ReachStausChanged", object: nil)
+        NSNotificationCenter.defaultCenter().postNotificationName("ReachStatusChanged", object: nil)
     }
     
 

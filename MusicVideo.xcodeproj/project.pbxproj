@@ -134,6 +134,7 @@
 		40814B581CA7A1FE006B3FDA /* Supporting files */ = {
 			isa = PBXGroup;
 			children = (
+				40D64E641CA66C8C007813B0 /* Assets.xcassets */,
 				40D64E5D1CA66C8C007813B0 /* AppDelegate.swift */,
 				40D64E691CA66C8C007813B0 /* Info.plist */,
 			);
@@ -169,7 +170,6 @@
 				40814B551CA7A144006B3FDA /* Model */,
 				40814B561CA7A18E006B3FDA /* Controler */,
 				40814B571CA7A1BA006B3FDA /* View */,
-				40D64E641CA66C8C007813B0 /* Assets.xcassets */,
 			);
 			path = MusicVideo;
 			sourceTree = "<group>";
