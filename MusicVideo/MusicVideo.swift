@@ -44,7 +44,7 @@ class Videos  {
         return _vPrice
     }
     
-    var vImageUtl:String{
+    var vImageUrl:String{
         return _vImageUrl
     }
     
