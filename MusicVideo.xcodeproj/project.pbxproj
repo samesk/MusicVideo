@@ -11,6 +11,7 @@
 		405764891CBFF0A80086D758 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 405764871CBFF0A80086D758 /* Reachability.m */; };
 		407A2EA81CAA9D630075D9C4 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 407A2EA71CAA9D620075D9C4 /* Constants.swift */; };
 		407A2EAA1CAAA4CB0075D9C4 /* MusicVideo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 407A2EA91CAAA4CB0075D9C4 /* MusicVideo.swift */; };
+		408310591CE3931B00B07F2D /* MusicVideoDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 408310581CE3931B00B07F2D /* MusicVideoDetailVC.swift */; };
 		40C002C81CA8FF4C0051BCE2 /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40C002C71CA8FF4C0051BCE2 /* APIManager.swift */; };
 		40D64E5E1CA66C8C007813B0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40D64E5D1CA66C8C007813B0 /* AppDelegate.swift */; };
 		40D64E601CA66C8C007813B0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40D64E5F1CA66C8C007813B0 /* ViewController.swift */; };
@@ -46,6 +47,7 @@
 		405764881CBFF0A80086D758 /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
 		407A2EA71CAA9D620075D9C4 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		407A2EA91CAAA4CB0075D9C4 /* MusicVideo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MusicVideo.swift; sourceTree = "<group>"; };
+		408310581CE3931B00B07F2D /* MusicVideoDetailVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MusicVideoDetailVC.swift; sourceTree = "<group>"; };
 		40C002C71CA8FF4C0051BCE2 /* APIManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
 		40D64E5A1CA66C8C007813B0 /* MusicVideo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MusicVideo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		40D64E5D1CA66C8C007813B0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -118,6 +120,7 @@
 		40814B561CA7A18E006B3FDA /* Controler */ = {
 			isa = PBXGroup;
 			children = (
+				408310581CE3931B00B07F2D /* MusicVideoDetailVC.swift */,
 				404655241CE1CC36003861A8 /* MusicVideoTVC.swift */,
 				40FCE0311CE328FC001724BE /* MusicVideoTableViewCell.swift */,
 				40D64E5F1CA66C8C007813B0 /* ViewController.swift */,
@@ -327,6 +330,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				40C002C81CA8FF4C0051BCE2 /* APIManager.swift in Sources */,
+				408310591CE3931B00B07F2D /* MusicVideoDetailVC.swift in Sources */,
 				40D64E601CA66C8C007813B0 /* ViewController.swift in Sources */,
 				407A2EAA1CAAA4CB0075D9C4 /* MusicVideo.swift in Sources */,
 				40FCE0321CE328FC001724BE /* MusicVideoTableViewCell.swift in Sources */,
