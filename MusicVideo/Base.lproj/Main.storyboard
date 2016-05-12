@@ -135,6 +135,7 @@
                             <constraint firstItem="Pcl-pc-MOc" firstAttribute="leading" secondItem="ha9-Uy-hRa" secondAttribute="leading" id="ACy-Nw-lDN"/>
                             <constraint firstAttribute="trailing" secondItem="Pcl-pc-MOc" secondAttribute="trailing" id="C5B-Ae-8v7"/>
                             <constraint firstItem="ECW-LE-3Vu" firstAttribute="trailing" secondItem="MEc-3F-6Kp" secondAttribute="trailingMargin" id="Gnd-3d-QTR"/>
+                            <constraint firstAttribute="trailing" secondItem="Pcl-pc-MOc" secondAttribute="trailing" id="JHd-oo-UTh"/>
                             <constraint firstItem="Pcl-pc-MOc" firstAttribute="trailing" secondItem="ha9-Uy-hRa" secondAttribute="trailing" id="KTU-6h-sO3"/>
                             <constraint firstItem="PiD-7o-XOx" firstAttribute="centerY" secondItem="ECW-LE-3Vu" secondAttribute="centerY" id="T9C-CT-O2J"/>
                             <constraint firstItem="Pcl-pc-MOc" firstAttribute="top" secondItem="9xn-qh-L9x" secondAttribute="bottom" constant="68" id="VZx-w2-T8D"/>
@@ -143,11 +144,51 @@
                             <constraint firstItem="pBo-PW-iwV" firstAttribute="leading" secondItem="MEc-3F-6Kp" secondAttribute="leadingMargin" constant="-13" id="aHf-aO-lvI"/>
                             <constraint firstItem="PiD-7o-XOx" firstAttribute="top" secondItem="Pcl-pc-MOc" secondAttribute="bottom" constant="1" id="cng-EC-EI3"/>
                             <constraint firstItem="PiD-7o-XOx" firstAttribute="leading" secondItem="MEc-3F-6Kp" secondAttribute="leadingMargin" id="dxh-yd-OgT"/>
+                            <constraint firstItem="Pcl-pc-MOc" firstAttribute="top" secondItem="9xn-qh-L9x" secondAttribute="bottom" constant="8" symbolic="YES" id="fqH-62-9Oi"/>
                             <constraint firstItem="ha9-Uy-hRa" firstAttribute="bottom" secondItem="YiI-zV-Y9A" secondAttribute="top" id="gue-kV-zF5"/>
                             <constraint firstItem="PiD-7o-XOx" firstAttribute="baseline" secondItem="ECW-LE-3Vu" secondAttribute="baseline" id="mZH-Zt-Nmo"/>
+                            <constraint firstItem="Pcl-pc-MOc" firstAttribute="centerX" secondItem="MEc-3F-6Kp" secondAttribute="centerX" id="n4Y-9Y-vGH"/>
                             <constraint firstItem="ha9-Uy-hRa" firstAttribute="top" secondItem="PiD-7o-XOx" secondAttribute="bottom" constant="8" symbolic="YES" id="niE-zu-vqT"/>
+                            <constraint firstItem="YiI-zV-Y9A" firstAttribute="top" secondItem="Pcl-pc-MOc" secondAttribute="bottom" constant="8" symbolic="YES" id="r0u-Ci-sW3"/>
                             <constraint firstItem="pBo-PW-iwV" firstAttribute="centerX" secondItem="Pcl-pc-MOc" secondAttribute="centerX" id="w3W-0m-075"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="JHd-oo-UTh"/>
+                                <exclude reference="fqH-62-9Oi"/>
+                                <exclude reference="n4Y-9Y-vGH"/>
+                                <exclude reference="r0u-Ci-sW3"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=compact">
+                            <mask key="subviews">
+                                <exclude reference="pBo-PW-iwV"/>
+                                <exclude reference="ECW-LE-3Vu"/>
+                                <exclude reference="ha9-Uy-hRa"/>
+                                <exclude reference="PiD-7o-XOx"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="WhX-fo-ARa"/>
+                                <exclude reference="YJ7-qd-7Rk"/>
+                                <exclude reference="aHf-aO-lvI"/>
+                                <exclude reference="w3W-0m-075"/>
+                                <exclude reference="ACy-Nw-lDN"/>
+                                <exclude reference="C5B-Ae-8v7"/>
+                                <include reference="JHd-oo-UTh"/>
+                                <exclude reference="KTU-6h-sO3"/>
+                                <exclude reference="VZx-w2-T8D"/>
+                                <include reference="fqH-62-9Oi"/>
+                                <include reference="n4Y-9Y-vGH"/>
+                                <exclude reference="T9C-CT-O2J"/>
+                                <exclude reference="cng-EC-EI3"/>
+                                <exclude reference="dxh-yd-OgT"/>
+                                <exclude reference="mZH-Zt-Nmo"/>
+                                <exclude reference="gue-kV-zF5"/>
+                                <exclude reference="niE-zu-vqT"/>
+                                <include reference="r0u-Ci-sW3"/>
+                                <exclude reference="Gnd-3d-QTR"/>
+                            </mask>
+                        </variation>
                     </view>
                     <toolbarItems>
                         <barButtonItem systemItem="play" id="McU-Ta-rpM">
@@ -168,7 +209,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SDm-VC-Ugh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="868" y="203"/>
+            <point key="canvasLocation" x="868" y="202.5"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="NEJ-Ua-Tm2">

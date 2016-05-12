@@ -26,7 +26,15 @@ class MusicVideoDetailVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-       title = videos.vArtist
+//        NSNotificationCenter.defaultCenter().addObserver(self, selector: Selector("preferredFontChange:"), name: UIContentSizeCategoryDidChangeNotification, object: nil)
+//        
+
+        
+        
+        
+        
+        
+        title = videos.vArtist
        vName.text = videos.vName
        vPrice.text = videos.vPrice
        vRights.text = videos.vRights
@@ -57,4 +65,10 @@ class MusicVideoDetailVC: UIViewController {
     }
     */
 
+    deinit
+    {
+        
+        NSNotificationCenter.defaultCenter().removeObserver(self, name: UIContentSizeCategoryDidChangeNotification, object: nil)
+    }
+    
 }
