@@ -62,7 +62,7 @@
                                     <outlet property="musicImage" destination="C7P-Z0-wY2" id="dnR-vJ-ayI"/>
                                     <outlet property="musicTitle" destination="OoF-o3-SM0" id="OuV-mh-nZL"/>
                                     <outlet property="rank" destination="SFk-yL-Jca" id="aCQ-Hs-qgI"/>
-                                    <segue destination="ssn-uA-tf3" kind="show" id="pD3-eI-cHe"/>
+                                    <segue destination="ssn-uA-tf3" kind="show" identifier="musicDetail" id="pD3-eI-cHe"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -92,19 +92,10 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Pcl-pc-MOc">
                                 <rect key="frame" x="1" y="132" width="599" height="282"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="vName" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pBo-PW-iwV">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="vName" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pBo-PW-iwV">
                                 <rect key="frame" x="7" y="64" width="586" height="69"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="69" id="lrQ-SN-xgO"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Genre:POP" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PiD-7o-XOx">
-                                <rect key="frame" x="20" y="415" width="209" height="35"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="209" id="4j2-jc-326"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -120,10 +111,19 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Rights" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ha9-Uy-hRa">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Rights" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ha9-Uy-hRa">
                                 <rect key="frame" x="1" y="458" width="599" height="98"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="98" id="6Aj-vS-zw6"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Genre:POP" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PiD-7o-XOx">
+                                <rect key="frame" x="20" y="415" width="209" height="35"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="209" id="4j2-jc-326"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -158,10 +158,17 @@
                             <color key="tintColor" red="1" green="0.066357078084408272" blue="0.2164329967106009" alpha="1" colorSpace="calibratedRGB"/>
                         </barButtonItem>
                     </toolbarItems>
+                    <connections>
+                        <outlet property="vGenre" destination="PiD-7o-XOx" id="rfq-wb-3Ww"/>
+                        <outlet property="vName" destination="pBo-PW-iwV" id="7W0-au-svI"/>
+                        <outlet property="vPrice" destination="ECW-LE-3Vu" id="mJ0-Wx-Mnc"/>
+                        <outlet property="vRights" destination="ha9-Uy-hRa" id="eiI-vH-DdO"/>
+                        <outlet property="videoImage" destination="Pcl-pc-MOc" id="mx9-Uj-JPz"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SDm-VC-Ugh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="883" y="220"/>
+            <point key="canvasLocation" x="868" y="203"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="NEJ-Ua-Tm2">
@@ -183,7 +190,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Y5u-9E-Mt7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-69" y="272"/>
+            <point key="canvasLocation" x="-203" y="182"/>
         </scene>
     </scenes>
 </document>

@@ -104,7 +104,7 @@ class Videos  {
         }
     // The video rights
         if let rights = data["rights"] as? JSONDictionary,
-            vRights = rights["lable"] as? String{
+            vRights = rights["label"] as? String{
             self._vRights = vRights
         
     } else {
