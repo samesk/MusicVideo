@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import AVKit
+import AVFoundation
 
 class MusicVideoDetailVC: UIViewController {
 
@@ -31,9 +33,6 @@ class MusicVideoDetailVC: UIViewController {
 
         
         
-        
-        
-        
         title = videos.vArtist
        vName.text = videos.vName
        vPrice.text = videos.vPrice
@@ -46,9 +45,30 @@ class MusicVideoDetailVC: UIViewController {
         else {
             videoImage.image = UIImage(named: "imageNotAvailable")
         }
+      
+        
         
     }
+    @IBAction func playVideo(sender: UIBarButtonItem) {
+        
+        let url = NSURL(string: videos.vVideoUrl)!
+       
+        let player = AVPlayer(URL: url)
+        
+        let playerViewController = AVPlayerViewController()
+        
+        playerViewController.player = player
+        
+        self.presentViewController(playerViewController, animated: true){ playerViewController.player?.play()
+        
+        
+        }
+        
+        
+    }
+   
 
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
