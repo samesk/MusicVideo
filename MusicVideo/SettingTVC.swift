@@ -39,8 +39,48 @@ class SettingTVC: UITableViewController {
         #endif
      
       tableView.alwaysBounceVertical = false
+        
+      title = "Setting"
+        
+      touchID.on = NSUserDefaults.standardUserDefaults().boolForKey("SecSetting")
+        
+        if (NSUserDefaults.standardUserDefaults().objectForKey("APICNT") != nil)
+        {
+            let theValue = NSUserDefaults.standardUserDefaults().objectForKey("APICNT") as! Int
+            APICnt.text = "\(theValue)"
+            slideCnt.value = Float(theValue)
+            
+        }
    
       }
+    
+    
+    @IBAction func valueChanged(sender: AnyObject) {
+        
+        let defaults = NSUserDefaults.standardUserDefaults()
+        defaults.setObject(Int(slideCnt.value), forKey: "APICNT")
+        APICnt.text = ("\(Int(slideCnt.value))")
+        
+        
+    }
+    
+    @IBAction func touchidSec(sender: UISwitch) {
+        
+        let defaults = NSUserDefaults.standardUserDefaults()
+        if touchID.on {
+            defaults.setBool(touchID.on, forKey: "SecSetting")
+            
+        }
+        else
+        {
+            defaults.setBool(false, forKey: "SecSetting")
+        
+        }
+    
+    }
+    
+    
+    
     func preferredFontChange(){
         
         aboutDisplay.font = UIFont.preferredFontForTextStyle(UIFontTextStyleSubheadline)
