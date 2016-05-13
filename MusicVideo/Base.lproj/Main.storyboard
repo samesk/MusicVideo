@@ -119,6 +119,9 @@
                                                 <constraint firstItem="rus-Mb-2yW" firstAttribute="centerY" secondItem="My4-Er-Y3o" secondAttribute="centerY" id="m2M-mU-Hec"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="Wej-Rd-drQ" kind="show" id="Jpf-k9-IDo"/>
+                                        </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="84" id="pKY-MU-aiK">
                                         <rect key="frame" x="0.0" y="148" width="600" height="84"/>
@@ -212,7 +215,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="600" height="83"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="200" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="akQ-a8-py2">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="10" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="akQ-a8-py2">
                                                     <rect key="frame" x="8" y="8" width="584" height="75"/>
                                                     <fontDescription key="fontDescription" style="UICTFontTextStyleSubhead"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -269,6 +272,61 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1uR-nn-myI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="489" y="938"/>
+        </scene>
+        <!--AboutVC-->
+        <scene sceneID="NG2-wQ-lhL">
+            <objects>
+                <viewController id="Wej-Rd-drQ" customClass="AboutVC" customModule="MusicVideo" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="ldU-ol-yXd"/>
+                        <viewControllerLayoutGuide type="bottom" id="ht4-Bv-Dzj"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="9Eh-tA-pi2">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Y1X-pO-3k6">
+                                <rect key="frame" x="101" y="84" width="0.0" height="0.0"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" highlightedImage="AppFront" translatesAutoresizingMaskIntoConstraints="NO" id="wwa-2C-9Bg">
+                                <rect key="frame" x="180" y="84" width="240" height="128"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="240" id="rbV-Ak-xjR"/>
+                                    <constraint firstAttribute="height" constant="128" id="vGy-j5-loj"/>
+                                </constraints>
+                            </imageView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" pagingEnabled="YES" textAlignment="justified" translatesAutoresizingMaskIntoConstraints="NO" id="UFH-UT-b2T">
+                                <rect key="frame" x="50" y="243" width="501" height="468"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <accessibility key="accessibilityConfiguration">
+                                    <accessibilityTraits key="traits" staticText="YES"/>
+                                </accessibility>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="468" id="zF2-Sb-EQW"/>
+                                </constraints>
+                                <mutableString key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</mutableString>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleSubhead"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Y1X-pO-3k6" firstAttribute="top" secondItem="wwa-2C-9Bg" secondAttribute="top" id="HAI-ZG-OLn"/>
+                            <constraint firstItem="wwa-2C-9Bg" firstAttribute="top" secondItem="ldU-ol-yXd" secondAttribute="bottom" constant="20" id="HNl-XK-XQz"/>
+                            <constraint firstItem="wwa-2C-9Bg" firstAttribute="centerX" secondItem="9Eh-tA-pi2" secondAttribute="centerX" id="KfL-v1-HhJ"/>
+                            <constraint firstItem="wwa-2C-9Bg" firstAttribute="centerX" secondItem="UFH-UT-b2T" secondAttribute="centerX" id="LFd-YI-qFC"/>
+                            <constraint firstItem="UFH-UT-b2T" firstAttribute="leading" secondItem="9Eh-tA-pi2" secondAttribute="leadingMargin" constant="30" id="RMT-qU-9Mc"/>
+                            <constraint firstItem="UFH-UT-b2T" firstAttribute="top" secondItem="wwa-2C-9Bg" secondAttribute="bottom" constant="31" id="bOk-nM-g8a"/>
+                            <constraint firstItem="Y1X-pO-3k6" firstAttribute="leading" secondItem="9Eh-tA-pi2" secondAttribute="leadingMargin" constant="81" id="oBJ-de-LdR"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pQL-7p-luZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1139" y="961"/>
         </scene>
         <!--Music Video DetailVC-->
         <scene sceneID="KE8-1E-20J">
@@ -430,4 +488,7 @@
             <point key="canvasLocation" x="-217" y="272"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="AppFront" width="750" height="1334"/>
+    </resources>
 </document>
