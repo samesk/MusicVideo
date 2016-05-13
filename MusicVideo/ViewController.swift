@@ -28,16 +28,8 @@ class ViewController: UIViewController ,UITableViewDataSource, UITableViewDelega
             NSNotificationCenter.defaultCenter().addObserver(self, selector: "reachabilityStatusCahnged:", name: "ReachStatusChanged", object: nil)
             
         #endif
-        #if swift(>=2.2)
-            
-         //   NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(ViewController.preferredFontChange), name: UIContentSizeCategoryDidChangeNotification, object: nil)
-            
-        #else
-            NSNotificationCenter.defaultCenter().addObserver(self, selector: "preferredFontChange:", name: UIContentSizeCategoryDidChangeNotification, object: nil)
-            
-        #endif
 
-       
+        
         reachabilityStatusCahnged()
    
         //call API
