@@ -80,6 +80,12 @@
                         </barButtonItem>
                     </toolbarItems>
                     <navigationItem key="navigationItem" id="LUI-ls-B7C"/>
+                    <refreshControl key="refreshControl" opaque="NO" multipleTouchEnabled="YES" contentMode="center" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" id="bPa-9c-C42">
+                        <autoresizingMask key="autoresizingMask"/>
+                        <connections>
+                            <action selector="refresh:" destination="smc-7r-Arx" eventType="valueChanged" id="lbd-Rc-bZg"/>
+                        </connections>
+                    </refreshControl>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Aro-KP-q78" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -215,18 +221,30 @@
                                             <rect key="frame" x="0.0" y="0.0" width="600" height="83"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Number of Music Videos" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZIM-u3-2Zr">
+                                                    <rect key="frame" x="8" y="22" width="441" height="39"/>
+                                                    <fontDescription key="fontDescription" style="UICTFontTextStyleSubhead"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="10" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="akQ-a8-py2">
-                                                    <rect key="frame" x="8" y="8" width="584" height="75"/>
+                                                    <rect key="frame" x="490" y="4" width="102" height="75"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="102" id="cSu-oO-aPr"/>
+                                                    </constraints>
                                                     <fontDescription key="fontDescription" style="UICTFontTextStyleSubhead"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="akQ-a8-py2" firstAttribute="leading" secondItem="V9D-mt-4RK" secondAttribute="leadingMargin" id="FVr-Us-UHv"/>
-                                                <constraint firstItem="akQ-a8-py2" firstAttribute="top" secondItem="V9D-mt-4RK" secondAttribute="topMargin" id="Uf2-ch-tiB"/>
-                                                <constraint firstItem="akQ-a8-py2" firstAttribute="trailing" secondItem="V9D-mt-4RK" secondAttribute="trailingMargin" id="WVQ-GY-qX2"/>
-                                                <constraint firstAttribute="bottom" secondItem="akQ-a8-py2" secondAttribute="bottom" id="ujt-IX-7ys"/>
+                                                <constraint firstItem="ZIM-u3-2Zr" firstAttribute="centerY" secondItem="V9D-mt-4RK" secondAttribute="centerY" id="3mu-iw-NMW"/>
+                                                <constraint firstItem="akQ-a8-py2" firstAttribute="leading" secondItem="ZIM-u3-2Zr" secondAttribute="trailing" constant="41" id="9dt-I1-Ez8"/>
+                                                <constraint firstItem="ZIM-u3-2Zr" firstAttribute="leading" secondItem="V9D-mt-4RK" secondAttribute="leadingMargin" id="IMm-M4-Xly"/>
+                                                <constraint firstItem="ZIM-u3-2Zr" firstAttribute="centerY" secondItem="akQ-a8-py2" secondAttribute="centerY" id="Mul-gU-bMu"/>
+                                                <constraint firstItem="akQ-a8-py2" firstAttribute="trailing" secondItem="V9D-mt-4RK" secondAttribute="trailingMargin" id="QuL-kD-yYg"/>
+                                                <constraint firstItem="ZIM-u3-2Zr" firstAttribute="top" secondItem="V9D-mt-4RK" secondAttribute="topMargin" constant="14" id="kPV-Rw-p9W"/>
+                                                <constraint firstItem="akQ-a8-py2" firstAttribute="top" secondItem="V9D-mt-4RK" secondAttribute="topMargin" constant="-4" id="syd-R2-NNV"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -238,16 +256,28 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="10" minValue="10" maxValue="200" translatesAutoresizingMaskIntoConstraints="NO" id="2kE-cx-otv">
-                                                    <rect key="frame" x="46" y="27" width="509" height="31"/>
+                                                    <rect key="frame" x="46" y="39" width="509" height="31"/>
                                                     <connections>
                                                         <action selector="valueChanged:" destination="9tb-8A-sRv" eventType="valueChanged" id="zT4-Iu-mt1"/>
                                                     </connections>
                                                 </slider>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Drag the Slider below" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bbh-se-ASq">
+                                                    <rect key="frame" x="185" y="9" width="230" height="21"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="21" id="h2I-JE-yZw"/>
+                                                        <constraint firstAttribute="width" constant="230" id="ug0-k7-Tjr"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" style="UICTFontTextStyleFootnote"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="2kE-cx-otv" firstAttribute="centerY" secondItem="5iA-vQ-Htg" secondAttribute="centerY" id="OAe-9F-dgj"/>
-                                                <constraint firstItem="2kE-cx-otv" firstAttribute="centerX" secondItem="5iA-vQ-Htg" secondAttribute="centerX" id="diU-L9-JJl"/>
-                                                <constraint firstItem="2kE-cx-otv" firstAttribute="leading" secondItem="5iA-vQ-Htg" secondAttribute="leadingMargin" constant="40" id="oaK-nz-8uC"/>
+                                                <constraint firstItem="2kE-cx-otv" firstAttribute="leading" secondItem="5iA-vQ-Htg" secondAttribute="leadingMargin" constant="40" id="2IY-hH-jco"/>
+                                                <constraint firstItem="bbh-se-ASq" firstAttribute="top" secondItem="5iA-vQ-Htg" secondAttribute="topMargin" constant="1" id="DMS-DN-EVu"/>
+                                                <constraint firstItem="bbh-se-ASq" firstAttribute="centerX" secondItem="5iA-vQ-Htg" secondAttribute="centerX" id="MZC-CA-a97"/>
+                                                <constraint firstItem="2kE-cx-otv" firstAttribute="top" secondItem="bbh-se-ASq" secondAttribute="bottom" constant="9" id="VVk-aJ-D0d"/>
+                                                <constraint firstItem="bbh-se-ASq" firstAttribute="centerX" secondItem="2kE-cx-otv" secondAttribute="centerX" id="XUY-xa-2F2"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -262,8 +292,10 @@
                     <connections>
                         <outlet property="APICnt" destination="akQ-a8-py2" id="HjR-cb-l04"/>
                         <outlet property="aboutDisplay" destination="rus-Mb-2yW" id="Tgm-tr-TFo"/>
+                        <outlet property="dragTheSliderDisplay" destination="bbh-se-ASq" id="v7l-dR-3HE"/>
                         <outlet property="feedBackDisplay" destination="IhA-Uh-a7e" id="bjc-bJ-FFY"/>
                         <outlet property="imageQualityDisplay" destination="bwW-7F-SYU" id="pmh-pX-xfw"/>
+                        <outlet property="numberOfMusicVideos" destination="ZIM-u3-2Zr" id="fna-X4-NgM"/>
                         <outlet property="securityDisplay" destination="1GF-Sd-sf1" id="Weo-k3-6bV"/>
                         <outlet property="slideCnt" destination="2kE-cx-otv" id="5A2-LP-LML"/>
                         <outlet property="touchID" destination="ec5-xa-zed" id="XLJ-hw-Tk1"/>

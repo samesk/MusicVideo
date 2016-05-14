@@ -24,8 +24,12 @@ class SettingTVC: UITableViewController {
     @IBOutlet weak var APICnt: UILabel!
     
     @IBOutlet weak var slideCnt: UISlider!
+        
+    @IBOutlet weak var numberOfMusicVideos: UILabel!
     
-   
+    @IBOutlet weak var dragTheSliderDisplay: UILabel!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -49,8 +53,12 @@ class SettingTVC: UITableViewController {
             let theValue = NSUserDefaults.standardUserDefaults().objectForKey("APICNT") as! Int
             APICnt.text = "\(theValue)"
             slideCnt.value = Float(theValue)
-            
+        } else {
+            slideCnt.value = 10.0
+            APICnt.text = ("\(Int(slideCnt.value))")
         }
+        
+        
    
       }
     
@@ -88,6 +96,9 @@ class SettingTVC: UITableViewController {
         securityDisplay.font = UIFont.preferredFontForTextStyle(UIFontTextStyleSubheadline)
         imageQualityDisplay.font = UIFont.preferredFontForTextStyle(UIFontTextStyleSubheadline)
         APICnt.font = UIFont.preferredFontForTextStyle(UIFontTextStyleSubheadline)
+        numberOfMusicVideos.font = UIFont.preferredFontForTextStyle(UIFontTextStyleSubheadline)
+        dragTheSliderDisplay.font = UIFont.preferredFontForTextStyle(UIFontTextStyleFootnote)
+        
     }
     
     deinit
