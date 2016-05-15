@@ -49,6 +49,52 @@ class MusicVideoDetailVC: UIViewController {
         
         
     }
+    
+    
+    @IBAction func socialMedia(sender: UIBarButtonItem) {
+        shareMedia()
+        
+    }
+    
+    func shareMedia(){
+        
+        let activity1 = "Have you had the oportunity to see this Video?"
+        let activity2 = ("\(videos.vName), By \(videos.vArtist).")
+        let activity3 = "Watch it and tell me what you tink !"
+        let activity4 = videos.vLinkToiTunes
+        let activity5 = "(Share with the Music Videos App - Step it UP)"
+        
+        let activityViewController : UIActivityViewController = UIActivityViewController(activityItems: [activity1, activity2, activity3, activity4, activity5], applicationActivities: nil)
+        //activityVieController.excludedActivityTypes = [UIActivityTypeMail]
+        
+        activityViewController.excludedActivityTypes = [
+//        
+//            UIActivityTypePostToTwitter,
+//            UIActivityTypePostToFacebook,
+//            UIActivityTypePostToWeibo,
+//            UIActivityTypeMessage,
+//            UIActivityTypeMail,
+//            UIActivityTypePrint,
+//            UIActivityTypeCopyToPasteboard,
+//            UIActivityTypeAssignToContact,
+//            UIActivityTypeSaveToCameraRoll,
+//            UIActivityTypeAddToReadingList,
+//            UIActivityTypePostToFlickr,
+//        
+            ]
+        activityViewController.completionWithItemsHandler = {
+            (activity, succses, item, error) in
+            
+            if activity == UIActivityTypeMail {
+                print("email selected")
+            }
+        }
+        
+        self.presentViewController(activityViewController, animated:true, completion: nil)
+    
+    }
+    
+
     @IBAction func playVideo(sender: UIBarButtonItem) {
         
         let url = NSURL(string: videos.vVideoUrl)!
