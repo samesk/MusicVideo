@@ -13,6 +13,8 @@ class Videos  {
     var vRank = 0
     //Data encapsulation
     
+    
+    private var _vUri:String
     private var _vName:String
     private var _vRights:String
     private var _vPrice:String
@@ -29,6 +31,12 @@ class Videos  {
     
     
     //Make a getter
+    
+    var vUri: String{
+        
+        return _vUri
+    
+    }
     
     var vName: String{
         return _vName
@@ -89,6 +97,18 @@ class Videos  {
         //If we do not initialize all properties we will get error message 
         
         //VideoName
+        
+       
+        if let uri = data["uri"] as? JSONDictionary,
+            vUri = uri ["label"] as? String {
+            self._vUri = vUri
+       
+        } else
+        {
+            _vUri = ""
+        }
+        
+        
         
         if let name = data["im:name"] as? JSONDictionary,
             vName = name["label"] as? String {

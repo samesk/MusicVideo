@@ -20,7 +20,7 @@ class MusicVideoTVC: UITableViewController {
         
        #if swift(>=2.2)
             
-            NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(ViewController.reachabilityStatusCahnged), name: "ReachStatusChanged", object: nil)
+            NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(MusicVideoTVC.reachabilityStatusCahnged), name: "ReachStatusChanged", object: nil)
             
         #else
             NSNotificationCenter.defaultCenter().addObserver(self, selector: "reachabilityStatusCahnged:", name: "ReachStatusChanged", object: nil)
@@ -28,8 +28,8 @@ class MusicVideoTVC: UITableViewController {
         #endif
         #if swift(>=2.2)
                 
-//                NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(ViewController.preferredFontChange), name: UIContentSizeCategoryDidChangeNotification, object: nil)
-//                
+                NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(MusicVideoTVC.preferredFontChange), name: UIContentSizeCategoryDidChangeNotification, object: nil)
+            
             #else
                 NSNotificationCenter.defaultCenter().addObserver(self, selector: "preferredFontChange:", name: UIContentSizeCategoryDidChangeNotification, object: nil)
                 
